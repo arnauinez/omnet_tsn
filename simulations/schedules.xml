@@ -1,0 +1,21 @@
+<schedule>
+  <stream id="0">
+    <datagramSchedule baseTime="0ns" cycleTime="5000us">
+      <event payloadSize="300B" destAddress="224.0.0.0" destPort="8" pcp="7" timeInterval="5000us"/>
+    </datagramSchedule>
+  </stream>
+  <switch name="SW1">
+    <port id="3">
+      <schedule baseTime="0ns" cycleTime="5000us">
+        <entry>
+          <length>64.8us</length>
+          <bitvector>00000001</bitvector>
+        </entry>
+        <entry>
+          <length>4935.2us</length>
+          <bitvector>11111110</bitvector>
+        </entry>
+      </schedule>
+    </port>
+  </switch>
+</schedule>
