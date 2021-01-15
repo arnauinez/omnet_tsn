@@ -1,19 +1,42 @@
 <schedule>
   <stream id="0">
-    <datagramSchedule baseTime="0ns" cycleTime="5000us">
-      <event payloadSize="300B" destAddress="224.0.0.0" destPort="8" pcp="7" timeInterval="5000us"/>
+    <datagramSchedule baseTime="0us" cycleTime="1100us">
+      <event payloadSize="300B" destAddress="224.0.0.0" destPort="8" pcp="7" timeInterval="80000us"/>
+    </datagramSchedule>
+  </stream>
+  <stream id="1">
+    <datagramSchedule baseTime="0us" cycleTime="1100us">
+      <event payloadSize="256B" destAddress="224.0.0.2" destPort="2" pcp="6" timeInterval="1250us"/>
+    </datagramSchedule>
+  </stream>
+  <stream id="2">
+    <datagramSchedule baseTime="0us" cycleTime="1100us">
+      <event payloadSize="1500B" destAddress="224.0.0.2" destPort="3" pcp="5" timeInterval="1100us"/>
+    </datagramSchedule>
+  </stream>
+  <stream id="3">
+    <datagramSchedule baseTime="0us" cycleTime="1100us">
+      <event payloadSize="1000B" destAddress="224.0.0.2" destPort="4" pcp="4" timeInterval="1100us"/>
     </datagramSchedule>
   </stream>
   <switch name="SW1">
     <port id="3">
-      <schedule baseTime="0ns" cycleTime="5000us">
+      <schedule baseTime="0us" cycleTime="1100us">
         <entry>
-          <length>64.8us</length>
-          <bitvector>00000001</bitvector>
+          <length>3us</length>
+          <bitvector>10000000</bitvector>
         </entry>
         <entry>
-          <length>4935.2us</length>
-          <bitvector>11111110</bitvector>
+          <length>3us</length>
+          <bitvector>01000000</bitvector>
+        </entry>
+        <entry>
+          <length>13us</length>
+          <bitvector>00100000</bitvector>
+        </entry>
+        <entry>
+          <length>9us</length>
+          <bitvector>00010000</bitvector>
         </entry>
       </schedule>
     </port>
